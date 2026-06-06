@@ -2,11 +2,11 @@ name: "Multi event pipeline / workflow" # Name of the pipeline
 on:
   push: # Event: Whenever a push is made to the repository on the master / test branch
     branches:
-      - master
+      - main
       - test
   pull_request: # Event: Whenever a pull request is made to the repository
     branches:
-      - master
+      - main
 
 jobs:
   on-push: # Job name
