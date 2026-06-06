@@ -1,20 +1,47 @@
-name : "hello world workflow"
+# name : "hello world workflow"
 
-on :
-  push :
-    branches:
-      - main
-      - production
+# on :
+#   push :
+#     branches:
+#       - main
+#       - production
 
-#on will trigger the workflow when there is a push to the main or production branch
+# #on will trigger the workflow when there is a push to the main or production branch
+
+# jobs:
+#   hello_world:
+#     runs-on : ubuntu-latest
+#     steps:
+#         - name : "print hello world"
+#           run : echo "hello world"
+    
+#         - name : "print current data and time"
+#           run : date 
+
+name: Learning Workflow
+
+on:
+  push:
 
 jobs:
   hello_world:
-    runs-on : ubuntu-latest
+    runs-on: ubuntu-latest
+
     steps:
-        - name : "print hello world"
-          run : echo "hello world"
-    
-        - name : "print current data and time"
-          run : date 
-          
+      - name: Print Message
+        run: echo "Hello Devansh"
+
+      - name: Print Date
+        run: date
+
+      - name: Print Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
+
+      - name: Print User
+        run: whoami
+
+      - name: Print OS Information
+        run: uname -a
