@@ -15,3 +15,6 @@ jobs:
         - name : "print hello world"
           run : echo "hello world"
     
+        - name : "print current data and time"
+          run : date 
+          
